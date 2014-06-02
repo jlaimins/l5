@@ -1,0 +1,10 @@
+class Person { name: string, family: string }
+!p:Person { p.name = "first", p.family = "last" }
+!p:Person { p.name = "second", p.family = "last" }
+!p:Person { p.name = "third", p.family = "other" }
+
+class Family { name: string }
+associate members:Person with family:Family
+**p:Person
+    [ *f:Family { f.name == p.family } | !f:Family { f.name = p.family } ]
+    p.!family.f

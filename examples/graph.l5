@@ -1,0 +1,47 @@
+class ANode { }
+class AEdge { }
+associate startNode:ANode with outgoing:AEdge
+associate endNode:ANode with incoming:AEdge
+
+!a:ANode
+!b:ANode
+!c:ANode
+!s:AEdge s.!startNode.a s.!endNode.b
+!p:AEdge p.!startNode.b p.!endNode.c
+
+class BNode { }
+class BStart { }
+class BEnd { }
+class BEdge { }
+associate node:BNode with connectedStart:BStart
+associate node:BNode with connectedEnd:BEnd
+associate outgoing:BEdge with start:BStart
+associate incoming:BEdge with end:BEnd
+
+associate mappedA:ANode with mappedB:BNode
+
+[**anode:ANode
+	!bnode:BNode
+	anode.!mappedB.bnode
+]
+
+[**aedge:AEdge !bedge:BEdge
+
+	!start:BStart bedge.!start.start
+	!end:BEnd bedge.!end.end
+
+	[
+		aedge.**startNode.anode
+		anode.*mappedB.bnode
+		bnode.!connectedStart.start
+	]
+
+	[
+		aedge.*endNode.anode
+		anode.*mappedB.bnode
+		bnode.!connectedEnd.end
+	]
+]
+
+
+

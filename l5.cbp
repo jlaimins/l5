@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="l5" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/l5" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin/Debug" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-DDEBUG" />
+					<Add directory="src/" />
+				</Compiler>
+				<Linker>
+					<Add library="dist\jr.dll" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/l5" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="src/" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="Test">
+				<Option output="bin/Test/l5" prefix_auto="1" extension_auto="1" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add directory="test" />
+					<Add directory="include/gmock" />
+				</Compiler>
+				<Linker>
+					<Add library="lib\libgmock_main.a" />
+					<Add library="lib\libgmock.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add directory="include" />
+			<Add directory="../l5" />
+		</Compiler>
+		<Unit filename="dist/jr.dll" />
+		<Unit filename="examples/graph.l5" />
+		<Unit filename="examples/person-family.l5" />
+		<Unit filename="include/jr/japier.h" />
+		<Unit filename="include/jr/tda_unicode.h" />
+		<Unit filename="main.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/context.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/context.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/icontext.h" />
+		<Unit filename="src/interpreter.cpp" />
+		<Unit filename="src/interpreter.definitions.cpp" />
+		<Unit filename="src/interpreter.expressions.cpp" />
+		<Unit filename="src/interpreter.h" />
+		<Unit filename="src/interpreter.patterns.cpp" />
+		<Unit filename="src/interpreter.value.cpp" />
+		<Unit filename="src/interpreter.variable.cpp" />
+		<Unit filename="src/irepository.h" />
+		<Unit filename="src/parser.cpp" />
+		<Unit filename="src/parser.h" />
+		<Unit filename="src/tokenizer.cpp" />
+		<Unit filename="src/tokenizer.h" />
+		<Unit filename="src/types.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="test/context.h">
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="test/interpreter.cpp">
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="test/parser.cpp">
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="test/tokenizer.cpp">
+			<Option target="Test" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

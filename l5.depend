@@ -1,0 +1,103 @@
+# depslib dependency file v1.0
+1401110138 source:e:\l5\main.cpp
+	<iostream>
+	<sstream>
+	<fstream>
+	"src/parser.h"
+	"src/context.h"
+	"src/interpreter.h"
+	<jr/japier.h>
+
+1400752194 e:\l5\src\parser.h
+	<istream>
+	"tokenizer.h"
+
+1400682330 e:\l5\src\tokenizer.h
+	<istream>
+
+1400777725 e:\l5\src\context.h
+	<map>
+	<string>
+	"src/irepository.h"
+
+1400828563 e:\l5\src\irepository.h
+	<string>
+	<map>
+
+1401099229 e:\l5\src\interpreter.h
+	"src/parser.h"
+	"src/icontext.h"
+
+1400671054 e:\l5\src\icontext.h
+	<map>
+	"src/irepository.h"
+
+1352456510 e:\l5\include\jr\japier.h
+	<string.h>
+	<stdlib.h>
+	<stdio.h>
+	"tda_unicode.h"
+	<errno.h>
+	"jap_ref.h"
+
+1326895296 e:\l5\include\jr\tda_unicode.h
+	<errno.h>
+	<stdlib.h>
+	<stdio.h>
+	<stdint.h>
+
+1400777725 source:e:\l5\src\interpreter.cpp
+	"interpreter.h"
+	<stdexcept>
+	<utility>
+	<vector>
+
+1401109188 source:e:\l5\src\interpreter.definitions.cpp
+	<src/interpreter.h>
+	<string>
+	<vector>
+	<stdexcept>
+	<iostream>
+
+1400840118 source:e:\l5\src\interpreter.expressions.cpp
+	"src/interpreter.h"
+	<string>
+
+1401105419 source:e:\l5\src\interpreter.patterns.cpp
+	<src/interpreter.h>
+	<iostream>
+	<vector>
+
+1400841167 source:e:\l5\src\interpreter.value.cpp
+	<src/interpreter.h>
+	<stdlib.h>
+	<string>
+	<sstream>
+
+1401099323 source:e:\l5\src\interpreter.variable.cpp
+	"src/interpreter.h"
+
+1401031102 source:e:\l5\src\parser.cpp
+	"parser.h"
+	<stdexcept>
+	<sstream>
+
+1401109694 source:e:\l5\src\tokenizer.cpp
+	"tokenizer.h"
+	<list>
+	<sstream>
+
+1401107755 source:e:\l5\src\context.cpp
+	<locale>
+	<string>
+	<sstream>
+	"context.h"
+	<jr/japier.h>
+	"src/types.cpp"
+	<iostream>
+
+1401639544 e:\l5\src\types.cpp
+	<jr/japier.h>
+	"src/irepository.h"
+	<stdexcept>
+
